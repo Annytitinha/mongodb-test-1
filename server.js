@@ -17,7 +17,8 @@ app.listen(port, function(err){
     console.log("Listening on Port: " + port)
 });
 
-mongoose.connect('mongodb://localhost/test');
+//Precisa colocar o link do cluster
+mongoose.connect('process.env.MONGODB_URL', , { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false });
 mongoose.connection.on('error', (err) => { 
     console.log('Mongodb Error: ', err); 
     process.exit();
