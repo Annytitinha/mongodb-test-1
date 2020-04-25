@@ -1,6 +1,6 @@
 var express = require('express'),
 router = express.Router(),
-userCtrl = require('./Controllers/catalog-controllerlerler');
+userCtrl = require('./Controllers/catalog-controller');
 
 router.post('/items', itemCtrl.createItem);
 router.get('/items', itemCtrl.getItems);
