@@ -1,4 +1,4 @@
-var User = require('../models/item');
+var Item = require('../models/item');
 // CRUD CREATE item
 exports.createItem = function(req, res) { 
     var newItem = new Item(req.body);
@@ -6,8 +6,7 @@ exports.createItem = function(req, res) {
         if (err) { 
             res.status(400).json(err);
         }
-        // sections aqui
-
+       
         res.json(item); 
 });
 };
