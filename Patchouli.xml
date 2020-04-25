@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- I've forked this file from https://github.com/mikhail-cct/CA1-In-class-Demo and I've changed/adapted it for my CCT college CA1 project.--> 
+<catalog>
+    <!--section name= "categories of my products"-->
+  <section name="Wome's Perfum">
+    <product>
+      <item>Marc Jacobs Daisy Dream Forever Eau de Parfum 50ml</item>
+      <price>46.00</price>
+    </product>
+    <product>
+      <item>Dolce Gabbana Light Blue Eau Intense Eau de Parfum 50ml</item>
+      <price>40.50</price>
+    </product>
+    <product>
+      <item>Gucci Bamboo Eau de Toilette For Her 75ml</item>
+      <price> 56.00</price>
+    </product>
+    <product>
+      <item>EMPORIO ARMANI She Eau de Parfum 50ml</item>
+      <price>59.00</price>
+    </product>
+  </section>
+  <section name="Men's Perfum">
+    <product>
+      <item>EMPORIO ARMANI He Mens Eau de Toilette 50ml</item>
+      <price>56.00</price>
+    </product>
+    <product>
+      <item>Jimmy Choo Urban Hero 50ml EDP Gift Set</item>
+      <price>62.00</price>
+    </product>
+    <product>
+      <item>Gucci Guilty Eau de Toilette For Him 50ml Gift Set</item>
+      <price>68.00</price>
+    </product>
+    <product>
+      <item>Montblanc Explorer EDP 60ml Gift Set</item>
+      <price>63.00</price>
+    </product>
+    <product>
+      <item>Carolina Herrera 212 VIP Men Black Eau de Parfum 50ml</item>
+      <price>39.00</price>
+    </product>
+  </section>
+  <section name="Make up">
+    <product>
+      <item>Lancôme Hypnôse Drama Mascara Make Up Gift Set</item>
+      <price>31.00</price>
+    </product>
+    <product>
+      <item>Lancôme Advent Calendar</item>
+      <price>135.00</price>
+    </product>
+    <product>
+      <item>Yves Saint Laurent Icons Make Up Gift Set</item>
+      <price>57.37</price>
+    </product>
+  </section>
+  <section name="Offers">
+    <product>
+      <item>Calvin Klein Women Eau de Parfum 50ml</item>
+      <price>48.00</price>
+    </product>
+    <product>
+      <item>Lacoste L.12.12 Pour Lui French Panache Eau de Toilette 100ml</item>
+      <price>35.00</price>
+    </product>
+    <product>
+      <item>Ralph Lauren Woman Eau de Parfum 50ml</item>
+      <price>48.00</price>
+    </product>
+    <product>
+      <item>Gucci Bamboo Eau de Toilette For Her 75ml(Was €105.00)</item>
+      <price>52.50</price>
+    </product>
+  </section>
+</catalog>
