@@ -1,12 +1,12 @@
 var express = require('express'),
 router = express.Router(),
-userCtrl = require('./user-controller');
+userCtrl = require('./Controllers/catalog-controllerlerler');
 
-router.post('/users', userCtrl.createUser);
-router.get('/users', userCtrl.getUsers);
-router.get('/users/:id', userCtrl.getUser);
-router.delete('/users/:id', userCtrl.deleteUser);
-router.put('/users/:id', userCtrl.updateUser);
+router.post('/items', itemCtrl.createItem);
+router.get('/items', itemCtrl.getItems);
+router.get('/items/:_id', itemCtrl.getItem);
+router.delete('/items/:_id', itemCtrl.deleteItem);
+router.put('/items/:_id', itemCtrl.updateItem);
 
 module.exports.UPLOAD_PATH = 'uploads';
 
