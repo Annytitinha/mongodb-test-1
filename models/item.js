@@ -5,8 +5,7 @@ var mongoose = require('mongoose');
 //  product schema
 var productSchema = new mongoose.Schema({ 
     
-  perfumCategory:{ 
-     type:String,
+  perfumCategory:{ type:String,
        enum: ['MALE', 'FEMALE']
     },
     name: String,
@@ -14,5 +13,5 @@ var productSchema = new mongoose.Schema({
 
   
 });
-
+// Export the model
 module.exports = mongoose.model('Item', productSchema );
