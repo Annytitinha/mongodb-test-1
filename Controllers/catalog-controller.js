@@ -11,7 +11,7 @@ exports.createItem = function(req, res) {
 });
 };
 // CRUD - get , read item
-exports.getUsers = function(req, res) {
+exports.getItems = function(req, res) {
   Item.find({}, function (err, items) {
     if (err) {
       res.status(400).json(err); 
