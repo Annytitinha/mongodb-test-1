@@ -7,17 +7,18 @@ mongoose = require('mongoose');
 
 var app = express();
 var port = (process.env.PORT || 3000);
-var itemCtrl = require('./Controllers/catalog-controller');
 
+app.use(express.urlencoded({ extended: true }));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(require('./routes'));
+
 app.set('view engine', 'ejs');
+var itemCtrl = require('./Controllers/catalog-controller');
+
 app.listen(port, function(err){
     console.log("Listening on Port: " + port)
 });
-app.get('/', itemCtrl.getItems);
-app.post('/', itemCtrl.createItem);
+app.use(require('./routes'));
 
 mongoose.connect(process.env.MONGODB_URL, { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false });
 
