@@ -35,11 +35,9 @@ exports.getItem = function(req, res) {
 };
 //Getting item from mongodb
 exports.updateItem = function(req, res) {
-  Item.findOneAndUpdate({_id: req.params.id}, req.body, {new: true},function (err, item) {
-    if (err) {
-      res.status(400).json(err);
-    } 
-    res.json(item);
+  Item.findByIdAndUpdate(req.params.id, {$set: req.body},function (err, item) {
+    if (err) return next(err);
+        res.send('Product udpated.');
   }); 
 };
 
