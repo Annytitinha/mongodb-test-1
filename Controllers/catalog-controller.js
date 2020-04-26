@@ -18,13 +18,13 @@ exports.getItems = function(req, res) {
       res.status(400).json(err); 
     }
    
-    // colocar minhas sections variaveis aqui
+    
     res.render('index', {
         data: items
     })
   }); 
 };
-// CRUD update
+// CRUD update item
 exports.getItem = function(req, res) {
   Item.findOne({_id: req.params.id}, function (err, item) {
     if (err) {
