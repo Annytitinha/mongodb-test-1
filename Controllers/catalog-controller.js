@@ -8,7 +8,7 @@ exports.createItem = function(req, res) {
             res.status(400).json(err);
         }
        
-        res.json(item); 
+        res.redirect('back');
 });
 };
 // CRUD - get , read item
@@ -19,7 +19,9 @@ exports.getItems = function(req, res) {
     }
    
     // colocar minhas sections variaveis aqui
-    res.json(items);
+    res.render('index', {
+        data: items
+    })
   }); 
 };
 // CRUD update

@@ -9,13 +9,10 @@
 	<meta name="author" content="">
 	<title>IWA Demo App</title>
 	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/patchouliStyle.css" rel="stylesheet">
-	
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body background= "https://www.thenaturalbeauty.blog/wp-content/uploads/2018/06/Perfume-Ingredients.jpg">
-"
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
 		<div class="container">	<a class="navbar-brand" href="#">Patchouli Store</a>
@@ -35,22 +32,39 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-left">
-				<h1 class="mt-5">Welcome to Patchouli Store</h1>
+				<h1 class="mt-5">Welcome to Patchouli APP</h1>
 				<p class="lead">Select your favorite perfume!</p>
 			</div>
-			<div id="results" class="col-lg-8 text-center order-3"></div>
+			<div id="" class="col-lg-8 text-center order-3">
+                <table class="table">
+                    <thead>
+                        <th>Category</th>
+                         <th>Name</th>
+                          <th>Price</th>
+                    </thead>
+                    <tbody>
+                    <% data.forEach(function (perfum){ %>
+                    <tr>
+                        <td><%= perfum.perfumCategory%></td>
+                        <td><%= perfum.name%></td>
+                        <td><%= perfum.price%></td>
+                    </tr>
+                    	<% }); %>
+                    </tbody>
+                </table>
+            </div>
 			<div class="col-lg-4 text-center order-2">
-				<form enctype="application/json" action="/post/json" method="post">
+				<form enctype="application/json" action="/" method="post">
 					<div class="form-group">
-						<select class="form-control" name="sec_n">
-							<option value="0">Wome's Perfum</option>
-							<option value="1">Men's Perfum</option>
-							<option value="2">Make up</option>
-							<option value="3">Offers</option>
+						<select class="form-control" name="perfumCategory">
+							<option value="FEMALE">Womem's Perfum</option>
+							<option value="MALE">Men's Perfum</option>
+							<option value="MAKEUP">Make up</option>
+							<option value="OFFERS">Offers</option>
 						</select>
 					</div>
 					<div class="form-group">
-						<input class="form-control" type="text" name="item" placeholder="Item">
+						<input class="form-control" type="text" name="name" placeholder="Item">
 					</div>
 					<div class="form-group">
 						<!-- validating the type=number for "price" only enter numbers no letters -->

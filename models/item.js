@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var productSchema = new mongoose.Schema({ 
     
   perfumCategory:{ type:String,
-       enum: ['MALE', 'FEMALE']
+       enum: ['MALE', 'FEMALE', 'MAKEUP', 'OFFERS']
     },
     name: String,
     price: Number
