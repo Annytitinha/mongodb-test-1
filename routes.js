@@ -2,7 +2,7 @@ var express = require('express'),
 router = express.Router(),
 itemCtrl = require('./Controllers/catalog-controller');
 
-router.post('/items', itemCtrl.createItem);
+router.post('/', itemCtrl.createItem);
 router.get('/items', itemCtrl.getItems);
 router.get('/items/:_id', itemCtrl.getItem);
 router.delete('/items/:_id', itemCtrl.deleteItem);

@@ -16,8 +16,9 @@ exports.getItems = function(req, res) {
     if (err) {
       res.status(400).json(err); 
     }
+   
     // colocar minhas sections variaveis aqui
-    res.json(obj);
+    res.json(items);
   }); 
 };
 // CRUD update
